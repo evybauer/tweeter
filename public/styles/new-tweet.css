@@ -1,0 +1,27 @@
+textarea {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+  background-color: #f4f1ec;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  border-bottom: 2px solid black;
+}
+
+input { 
+  background-color: #4154a1;
+  font-family: 'Bungee', cursive;
+  float: left;
+  color: #ffff;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+  float: right;
+  font-weight: 600;
+}
+
