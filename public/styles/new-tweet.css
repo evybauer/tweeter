@@ -1,3 +1,4 @@
+/* Post new tweet */
 textarea {
   border: none;
   overflow: auto;
@@ -24,4 +25,13 @@ input {
   float: right;
   font-weight: 600;
 }
+
+
+/* Count Characteres*/
+.exceeded {
+  color: red;
+}
+
+
+
 
