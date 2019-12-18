@@ -1,16 +1,16 @@
-$(document).ready(function() {
-console.log('test');
-});
+// $(document).ready(function() {
+// console.log('test');
+// });
 
 $('textarea').keyup(function() {
   // $(this).css("background-color", 'blue');
   let maxLength = 140;
-  var length = $(this).val().length;
-  var length = maxLength-length;
-  if (length <= 0) {
-    $(this).siblings("span").text(length).addClass('exceeded');
+  let length = $(this).val().length;
+  let totalLength = maxLength - length;
+  if (totalLength <= 0) {
+    $(this).siblings("span").text(totalLength).addClass('exceeded');
 
   } else {
-    $(this).siblings("span").text(length).removeClass('exceeded');
-  };
-  });
+    $(this).siblings("span").text(totalLength).removeClass('exceeded');
+  }
+});
