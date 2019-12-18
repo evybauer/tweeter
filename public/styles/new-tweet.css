@@ -28,12 +28,14 @@ input {
 }
 
 /* New tweet*/
+
 article {
   border: 2px solid black;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-right: 20px;
   padding-left: 20px;
+  margin: 20px;
 }
 
 article:hover {
@@ -46,19 +48,24 @@ article:hover {
 article.tweet header {
   display: flex;
   background-color: #f4f1ec;
-  justify-content: stretch;
-  height: 100%;
+  height: auto;
   width: 100%;
 }
 
-.usertag {
-  margin-left: auto;
+.name {
+  margin-right: auto;
+  padding-top: 0px;
 }
 
-article.tweet textarea {
+.user {
+  margin-left: auto;
+  padding-top: 0px;
+}
+
+article.tweet div p{
   border-bottom: 2px solid black;
-  /* padding: 10px;
-  margin: 20px */
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 article.tweet footer {
@@ -66,7 +73,8 @@ article.tweet footer {
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  font-size: 12px
+  font-size: 15px;
+  margin-top: 10px;
 }
 
 article.tweet img {
