@@ -29,18 +29,24 @@
 //   }
 // ];
 
+
+
 $(document).ready(function() {
+
   let $form = $('.new-tweet-form');
   // console.log('beta', $form.serialize())
     $form.on('submit', function (event) {
       event.preventDefault();
         let input = $(this).find('textarea').val();
           if (input.length > 140) {
-            alert("More than 140");
+            $(".tweet-error")
+            .prepend($("<div>")
+            .addClass("error")
+            .text("⚠️ Too long. Keep your tweet within 140 characteres ⚠️").slideDown("fast"));
             return;
           }
           if (input === '' || input === null) {
-            alert("Please, tweet something");
+            $(".tweet-error").prepend($("<div>").addClass("error").text("⚠️ We cannot post an empty tweet. Please, write it first 🐥").slideDown("fast"));;
             return;
           }
       console.log('Button clicked, performing ajax call...');
@@ -50,10 +56,24 @@ $(document).ready(function() {
       return $.ajax('/tweets', { method: 'POST', data: $form.serialize()},)
       .then(function () {
         loadTweets () 
+        $(".tweet-error").slideUp();
         console.log('Success!');
       })
-    });
+    }); 
+    
+$(".new-tweet").hide();
+$(".compose").click(function() {
+  $(".new-tweet").slideToggle();
+});
   });
+
+
+const escape =  function(str) {
+  let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+  }
+  {/* <script>alert('uh oh');</script> */}
 
 const renderTweets = function(tweets) {
   // console.log("All tweets", tweets);
@@ -76,9 +96,8 @@ const loadTweets = function () {
 loadTweets();
 
 
-
 const createTweetElement = function(tweet) {
-  let $tweet = $('<article>').addClass('tweet');
+  let $tweet = $("<article>").addClass("tweet");
   $tweet.append(
     `<header class = "header">
     <img class="avatar" src="${tweet.user.avatars}">
@@ -87,7 +106,7 @@ const createTweetElement = function(tweet) {
     </header>
     
     <div>
-    <p>${tweet.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
     </div>
     
     <footer class = "footer">    
