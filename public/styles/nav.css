@@ -1,23 +1,57 @@
 
 nav {
-position: fixed;
-height: 120px;
-width: 100vw;
-z-index: 1000;
-background-color: #4154a1;
-color: #FFFFFF;
-padding: 1.5em;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding-left: 1.5em;
-padding-right: 1.5em;
+  position: fixed;
+  height: 120px;
+  width: 100vw;
+  z-index: 1000;
+  background-color: #4154a1;
+  color: #FFFFFF;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 nav span {
   font-family: 'Bungee', cursive;
 }
 
+nav p {
+  text-align: center;
+}
 
+.fa-angle-double-down {
+  color: orange;
+}
+
+
+p span {
+  font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+
+i:hover {
+  opacity: 0.5;
+  transition: .3s ease-in-out;
+} 
 
 
