@@ -1,10 +1,10 @@
-
+/*Navbar*/
 nav {
   position: fixed;
   height: 120px;
   width: 100vw;
   z-index: 1000;
-  background-color: #4154a1;
+  background-color: #4154A1;
   color: #FFFFFF;
   padding: 1.5em;
   display: flex;
@@ -12,6 +12,7 @@ nav {
   justify-content: space-between;
   padding-left: 1.5em;
   padding-right: 1.5em;
+  top: 0px;
 }
 
 nav span {
@@ -20,18 +21,20 @@ nav span {
 
 nav p {
   text-align: center;
+  margin-top: 0px;
+  margin-bottom: 50px;
 }
 
 .fa-angle-double-down {
-  color: orange;
+  color: #EB9D00;
 }
-
 
 p span {
   font-weight: bold;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+/*Bounce and hover effects of navbar arrows*/
 .bounce {
   animation: bounce 2s infinite;
 }
@@ -48,10 +51,19 @@ p span {
   }
 }
 
-
 i:hover {
   opacity: 0.5;
   transition: .3s ease-in-out;
 } 
 
 
+@media only screen and (max-width: 1024px) {
+  nav {
+    width: 100%;
+    background-color: #EB9D00;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  }
+  .fa-angle-double-down {
+    color: #FF0000;
+  }
+}

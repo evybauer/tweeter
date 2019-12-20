@@ -1,11 +1,11 @@
-
+/*Header*/
 header {
   height: 400px;
   width: 100%;
   text-align: center;  
   background-color: #eb9d00;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-  }
+}
   
 img {
   position: relative;
@@ -13,11 +13,29 @@ img {
 }
   
 p {
-  padding-top:2.2em;
+  padding-top:3.5em;
+  display: block;
 }
 
+p span {
+  font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
-  
-  
-  
-  
+@media only screen and (min-width: 1024px) {
+  header {
+    width: 40%;
+    margin-left: 50px;
+    float: left;
+    margin-top: 200px;  
+  }
+
+  img {
+    top: 50px;
+  }
+
+  p {
+    top: 0px;
+    padding-top: 1.5em;
+  }
+}

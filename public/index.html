@@ -18,6 +18,9 @@
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
     <script src="https://kit.fontawesome.com/f837adc989.js"></script>
 
+    <!-- Disable viewport zooming -->
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
   </head>
 
   <body>
@@ -31,17 +34,11 @@
       </p> 
     </nav>
 
-
     <!-- Header (main) -->
 
     <header >
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <p><strong>Evelyn</strong> Bauer</p>
-      </div>
+      <img src="/images/profile-hex.png"> 
+      <p><span>Evelyn</span> Bauer</p>
     </header>
 
     <!-- Page-specific (main) content here -->
@@ -55,9 +52,6 @@
             <span class="counter">140</span>
           </form>
       </section>
-          
-      <br><br>
-          
       <section class="tweets-container">
       </section>
     </main>
@@ -66,5 +60,5 @@
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 </html>

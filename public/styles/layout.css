@@ -25,10 +25,27 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-main {
+ /*Main Container -- Tweet's form and posts submitted*/
+main.container {
   padding-right: 5%;
   padding-left: 5%;
   padding-bottom: 80%;
   justify-content: center;
   background-color: #f4f1ec;
+  display: block;
 }
+
+
+@media only screen and (min-width: 1024px) {
+  main.container {
+    width: 55%;
+    float: right;
+    overflow: auto;
+    margin-top: 160px;
+  }
+}
+
+
+
+
+
